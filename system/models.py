@@ -22,7 +22,7 @@ class Event(models.Model):
 
 class KPI(models.Model):
     member = models.ForeignKey(Member, on_delete=models.CASCADE)
-    event = models.OneToOneField(Event, on_delete=models.CASCADE)
+    event = models.ForeignKey(Event, on_delete=models.CASCADE)
     communication = models.IntegerField()
     timeliness = models.IntegerField()
     quality_of_work = models.IntegerField()
